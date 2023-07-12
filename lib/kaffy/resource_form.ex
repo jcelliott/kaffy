@@ -127,10 +127,7 @@ defmodule Kaffy.ResourceForm do
         end
 
       :binary_id ->
-        case field in Kaffy.ResourceSchema.primary_keys(schema) do
-          true -> text_input(form, field, opts)
-          false -> text_or_assoc(conn, schema, form, field, opts)
-        end
+        text_or_assoc(conn, schema, form, field, opts)
 
       :string ->
         text_input(form, field, opts)
