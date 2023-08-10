@@ -186,6 +186,8 @@ Starting with Kaffy v0.9, the `:resources` option can take a literal list or a f
 If a function is provided, it should take a conn and return a list of contexts and schemas like in the example above.
 Passing a conn to the function provides more flexibility and customization to your resources list.
 
+You can use `Kaffy.Utils.setup_resources()` to fetch the auto-detected list of resources if you don't want to start defining them from scratch.
+
 You can set the `:hide_dashboard` option to true to hide the dashboard link from the side menu.
 To change the home page, change the `:home_page` option to one of the following:
 
