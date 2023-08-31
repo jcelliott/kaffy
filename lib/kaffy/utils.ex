@@ -370,7 +370,7 @@ defmodule Kaffy.Utils do
     if is_binary(string), do: String.to_existing_atom(string), else: string
   end
 
-  defp setup_resources do
+  def setup_resources do
     otp_app = env(:otp_app)
     {:ok, mods} = :application.get_key(otp_app, :modules)
 
